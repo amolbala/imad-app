@@ -31,7 +31,7 @@ function createTemplate (data)  {
             <a href = "/">Home</a>
             <hr>
             <h1>${heading}</h1>
-            ${date}
+            <h3>${date}</h3>
             ${content}
             <hr>
         </body>
