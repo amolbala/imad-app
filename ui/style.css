@@ -1,7 +1,11 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
-    margin-top: 75px;
+    margin-top: 40px;
+}
+
+h1 {
+    text-align: center;
 }
 
 .center {
@@ -18,5 +22,10 @@ body {
 
 .img-medium {
     height: 200px;
+}
+
+.container {
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
