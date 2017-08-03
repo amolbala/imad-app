@@ -23,14 +23,14 @@ function createTemplate (data)  {
     <!DOCTYPE html>
     <html>
         <head>
-            ${title}
+            <title>${title}</title>
             <link href="/ui/style.css" rel="stylesheet" />
             <meta name = "viewport" content = "width-device-width, initial-scale-1" />
         </head>
         <body class = "container">
             <a href = "/">Home</a>
             <hr>
-            ${heading}
+            <h1>${heading}</h1>
             ${date}
             ${content}
             <hr>
