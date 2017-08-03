@@ -2,6 +2,45 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+
+var article_one = {
+    title: 'abbunini | Article One',
+    heading: 'Article One',
+    date: '3 August 2017',
+    content: `<p>
+            This is the content of the web page. This is the content of the web page. <br>
+            My name is Amol. I have a cute little brother called Bala :).
+            </p>`,
+};
+
+function createTemplate (data)  {
+    var title = data.title;
+    var haeding = data.heading;
+    var date = data.date;
+    var content = data.content;
+    
+    var htmlTemplate = `
+    <!DOCTYPE html>
+    <html>
+        <head>
+            ${title}
+            <link href="/ui/style.css" rel="stylesheet" />
+            <meta name = "viewport" content = "width-device-width, initial-scale-1" />
+        </head>
+        <body class = "container">
+            <a href = "/">Home</a>
+            <hr>
+            ${heading}
+            ${date}
+            ${content}
+            <hr>
+        </body>
+    </html>
+    `;
+    return htmlTemplate;
+}
+
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -17,8 +56,9 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+
 app.get('/ui/article_one.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article_one.html'));
+  res.send(createTemplate(article_one));
 });
 
 app.get('/ui/article_two.html', function (req, res) {
