@@ -4,11 +4,11 @@ var img = document.getElementById('madi');
 var leftMargin = 0;
 var rightMargin = 0;
 function moveRight () {
-    leftMargin += 1;
+    leftMargin =  leftMargin + 1;
     img.style.marginLeft = leftMargin + "px";
 }
 function moveLeft () {
-    rightMargin +=1;
+    rightMargin = rightMargin + 1;
     img.style.marginRight = rightMargin + "px";
 }
 img.onClick = function () {
