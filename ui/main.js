@@ -35,6 +35,6 @@ counter.onclick = function () {
         // Not done yet
     };
     // Make the request
-    request.open('GET', 'http://abbunini.imad.hasura-app.io/counter', true);
+    request.open('GET', 'abbunini.imad.hasura-app.io/counter', true);
     requset.send(null);
 };
