@@ -15,3 +15,6 @@ img.onclick = function () {
     console.log(marginRight);
     var interval = setInterval(moveRight, 50);
 };
+
+var counter = document.getElementById('counter');
+counter.onclick
